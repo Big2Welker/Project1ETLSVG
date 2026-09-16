@@ -1,16 +1,11 @@
-# Environments
-.env
-__pycache__/
-*.pyc
-.venv/
+# Entornos virtuales y secretos (ESTOS SÍ SE IGNORAN)
 venv/
 env/
+.env
 
-# Data
-data/raw/*
-data/processed/*
-!data/raw/.gitkeep
-!data/processed/.gitkeep
+# Archivos compilados de Python (BASURA DEL SISTEMA)
+__pycache__/
+*.pyc
 
-# Jupyter
-.ipynb_checkpoints/
+# NOTA: La carpeta data/ y los archivos .csv ESTÁN PERMITIDOS
+# explícitamente para este ejercicio académico.

@@ -60,11 +60,26 @@ flowchart LR
 
 ```mermaid
 erDiagram
-    Dim_Geografia ||--o{ Fact_IRCA : "Filtra"
-    Dim_Tiempo ||--o{ Fact_IRCA : "Filtra"
-    Dim_Geografia { int sk_geografia PK }
-    Dim_Tiempo { int sk_tiempo PK }
-    Fact_IRCA { int fk_geografia FK int fk_tiempo FK float irca_urbano float irca_rural }
+    Dim_Geografia ||--o{ Fact_IRCA : "Filtra (1:N)"
+    Dim_Tiempo ||--o{ Fact_IRCA : "Filtra (1:N)"
+
+    Dim_Geografia {
+        int sk_geografia PK "Clave Sustituta"
+        string departamento
+        string municipio
+    }
+    
+    Dim_Tiempo {
+        int sk_tiempo PK "Clave Sustituta"
+        int anio
+    }
+    
+    Fact_IRCA {
+        int fk_geografia FK, PK
+        int fk_tiempo FK, PK
+        float irca_urbano "Medida"
+        float irca_rural "Medida"
+    }
 ```
 *   `Dim_Tiempo`: Requerida para agrupaciones históricas (R1, R4, R5).
 *   `Dim_Geografia`: Desnormalizada para análisis territoriales fluidos (R2, R3).

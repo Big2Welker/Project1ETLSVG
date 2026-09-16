@@ -98,4 +98,4 @@ El Dashboard de **Power BI** conecta directo al DW de MySQL e incorpora:
 3. **Casos de Éxito:** Regiones céntricas muestran las mayores reducciones (deltas negativos) de IRCA rural, marcando la pauta en políticas públicas.
 
 ## 12. Integrantes del Equipo
-* **[TU NOMBRE AQUÍ]** - Rol: Data Engineer / Analista BI.
+* **Sebastian Rojas Herrera y Juan David Bedoya** - Rol: Data Engineer / Analista BI.
